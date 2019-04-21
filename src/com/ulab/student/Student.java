@@ -1,5 +1,11 @@
 package com.ulab.student;
 
-public class Student {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Student {
+	String studentName;
+	String studentId;
+	List<Course> courses = new ArrayList<Course>();
+	
 }
