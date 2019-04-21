@@ -1,11 +1,22 @@
 package com.ulab.student;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Student {
 	String studentName;
-	String studentId;
-	List<Course> courses = new ArrayList<Course>();
-	
+	int studentId;
+	ArrayList<Course> courseList = new ArrayList<Course>();
+	public Student() {
+		
+	}
+	public Student(String studentName,int studentId) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+	}
+	public void setCourseList(ArrayList<Course> courseList) {
+		this.courseList = courseList;
+	}
+	public ArrayList<Course> getCourseList(){
+		return this.courseList;
+	}
 }
