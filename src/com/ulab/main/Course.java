@@ -1,4 +1,5 @@
-package com.ulab.student;
+package com.ulab.main;
+
 
 public class Course {
 	private int courseID;
@@ -16,9 +17,5 @@ public class Course {
 	public Course() {
 		
 	}
-	public String getDetail() {
-		return String.format("%s-%d : %s section: %d",this.courseName,this.courseID,this.courseDescription,this.courseSection);
-	}
-	
 	
 }
