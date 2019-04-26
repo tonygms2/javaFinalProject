@@ -1,8 +1,8 @@
 package com.ulab.main;
 
-public class Faculty extends StudentTeacherCommonAttr {
-	private String facultyName = null;
-	private String facultDepartment = null;
+public class Faculty extends CommonAttributes {
+	private String facultyName;
+	private String facultDepartment;
 	
 	public Faculty(String facultyName,String facultyDepartment,gender Gender) {
 		this.facultyName = facultyName;
@@ -11,5 +11,10 @@ public class Faculty extends StudentTeacherCommonAttr {
 	}
 	public Faculty() {
 		
+	}
+	
+	void showFacultyInfo() {
+		System.out.println("Faculty name is : "+facultyName+" from "+facultDepartment+" department who is "+ super.ShowGender());
+		System.out.println("DOB: "+this.showDOB());
 	}
 }
