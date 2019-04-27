@@ -6,10 +6,23 @@ import java.util.Currency;
 
 public abstract class CommonAttributes {
 	private LocalDate DOB;
-	private boolean isIEEMember;
-	private boolean isComSocMember;
+	protected boolean isIEEMember = false;
+	private boolean isComSocMember = false;
 	protected gender Gender;
 	private int day,year,month;
+	
+	public void setMemebership(boolean isIEEMember, boolean isComSocMember) {
+		this.isIEEMember = isIEEMember;
+		this.isComSocMember = isComSocMember;
+	}
+	
+	public boolean getIeeInfo() {
+		return this.isIEEMember;
+	}
+	
+	public boolean getComSocInfo() {
+		return this.isComSocMember;
+	}
 	
 	public void setGender(gender Gender) {
 		this.Gender = Gender;

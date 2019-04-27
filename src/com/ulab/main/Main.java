@@ -7,20 +7,17 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Faculty mizan = new Faculty("Mizanur Rahman", "CSE",gender.male);
-		mizan.setDOB(12, 11, 1985);
+		Faculty mizan = new Faculty("Mizanur Rahman",2441139, "CSE",gender.male);
+		mizan.setDOB(23, 11, 1977);
+		mizan.setMemebership(true, true);
 		mizan.showFacultyInfo();//sysouts all info
-		System.out.println(mizan.showDOB());//returns DOB in strings
-		Student tony = new Student("Nicholas Tony Gomes", "CSE", gender.male);
+		//System.out.println(mizan.showDOB());//returns DOB in strings
+		Student tony = new Student("Nicholas Tony Gomes",172014005, "CSE", gender.male);
 		tony.setDOB(9, 3, 1997);
+		tony.setMemebership(true, false);
 		tony.showStudentInfo();//sysouts all info
-		System.out.println(tony.showDOB());//returns DOB in strings
-		
-//		tony.setGender(gender.male);
-//		System.out.println(tony.getGender());
-//		tony.setDOB(9, 3, 1997);
-//		System.out.println(tony.showDOB());
-//		
+	//	System.out.println(tony.showDOB());//returns DOB in strings
+
 	}
 
 }
