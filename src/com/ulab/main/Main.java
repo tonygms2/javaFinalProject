@@ -16,6 +16,8 @@ public class Main {
 		tony.setDOB(9, 3, 1997);
 		tony.setMemebership(true, false);
 		tony.showStudentInfo();//sysouts all info
+		connectionMySQL obj = new connectionMySQL();
+		obj.setConnection();
 	//	System.out.println(tony.showDOB());//returns DOB in strings
 
 	}
