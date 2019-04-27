@@ -5,13 +5,16 @@ import java.lang.System;
 public class Student extends CommonAttributes {
 	private String studentName ;
 	private String studentDepartment;
-	private int ID;
+	private Integer ID;
 
 	public Student(String studentName,int ID,String StudentDepartment,gender Gender) {
 		this.studentDepartment = StudentDepartment;
 		this.studentName = studentName;
 		super.Gender = Gender;
 		this.ID = ID;
+	}
+	public int getStudentID() {
+		return this.ID;
 	}
 	
 	public Student() {

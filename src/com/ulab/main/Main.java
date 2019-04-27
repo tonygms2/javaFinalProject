@@ -13,10 +13,10 @@ public class Main {
 //		mizan.setMemebership(true, true);
 //		mizan.showFacultyInfo();//sysouts all info
 //		//System.out.println(mizan.showDOB());//returns DOB in strings
-//		Student tony = new Student("Nicholas Tony Gomes",172014005, "CSE", gender.male);
 //		tony.setDOB(9, 3, 1997);
 //		tony.setMemebership(true, false);
 //		tony.showStudentInfo();//sysouts all info
+		
 		connectionMySQL obj = new connectionMySQL();
 		obj.setConnection();
 		//obj.getStatement();
