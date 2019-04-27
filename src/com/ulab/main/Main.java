@@ -1,11 +1,12 @@
 package com.ulab.main;
 
+import java.sql.SQLException;
 import java.util.Date;
 import org.joda.time.*;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		
 		Faculty mizan = new Faculty("Mizanur Rahman",2441139, "CSE",gender.male);
 		mizan.setDOB(23, 11, 1977);
