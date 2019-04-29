@@ -4,12 +4,15 @@ public class Faculty extends CommonAttributes {
 	private String facultyName;
 	private String facultDepartment;
 	private int ID;
+	private double salary;
+	
 	public Faculty(String facultyName,int ID,String facultyDepartment,gender Gender) {
 		this.facultyName = facultyName;
 		this.facultDepartment = facultyDepartment;
 		super.Gender = Gender;
 		this.ID = ID;
 	}
+	
 	public Faculty() {
 		
 	}
@@ -36,4 +39,5 @@ public class Faculty extends CommonAttributes {
 		}
 		
 	}
+
 }

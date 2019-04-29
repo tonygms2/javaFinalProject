@@ -6,7 +6,16 @@ public class Student extends CommonAttributes {
 	private String studentName ;
 	private String studentDepartment;
 	private Integer ID;
-
+	private double money;
+	
+	public double getBalance() {
+		return this.money;
+	}
+	
+	public void setStudentMoney(double money) {
+		this.money = money;
+	}
+	
 	public Student(String studentName,int ID,String StudentDepartment,gender Gender) {
 		this.studentDepartment = StudentDepartment;
 		this.studentName = studentName;
