@@ -2,6 +2,10 @@ package com.ulab.main;
 import java.lang.System;
 
 
+/**
+ * @author tonyg
+ *
+ */
 public class Student extends CommonAttributes {
 	private String studentName ;
 	private String studentDepartment;
@@ -11,7 +15,12 @@ public class Student extends CommonAttributes {
 	public double getBalance() {
 		return this.money;
 	}
-	
+	public String getStudentName() {
+		return this.studentName;
+	}
+	public String getStudentDept() {
+		return this.studentDepartment;
+	}
 	public void setStudentMoney(double money) {
 		this.money = money;
 	}

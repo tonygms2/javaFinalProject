@@ -1,5 +1,9 @@
 package com.ulab.main;
 
+/**
+ * @author tonyg
+ *
+ */
 public class Payment {
 	double finalAmount;
 	double currentStudentBalance;

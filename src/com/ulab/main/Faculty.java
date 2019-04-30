@@ -1,5 +1,9 @@
 package com.ulab.main;
 
+/**
+ * @author tonyg
+ *
+ */
 public class Faculty extends CommonAttributes {
 	private String facultyName;
 	private String facultDepartment;

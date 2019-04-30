@@ -4,6 +4,10 @@ import java.sql.SQLException;
 import java.util.Date;
 import org.joda.time.*;
 
+/**
+ * @author tonyg
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) throws SQLException {
@@ -12,12 +16,19 @@ public class Main {
 		Payment studentInfo = new Payment();
 		tony.setStudentMoney(5000);
 		tony.setDOB(9, 3, 1997);
+		//System.out.println(tony.showDOB());
 		tony.setMemebership(true, true);
 		//studentInfo.takeComSocMoney(tony);
-		studentInfo.takeIeeMoney(tony);
-		studentInfo.takeComSocMoney(tony);
-		studentInfo.takeIeeMoney(tony);
-		tony.showStudentInfo();
+		//studentInfo.takeIeeMoney(tony);
+		//studentInfo.takeComSocMoney(tony);
+		//studentInfo.takeIeeMoney(tony);
+		//tony.showStudentInfo();
+		
+		Student kowshik = new Student("Sheldon Cooper",1234567,"CSE",gender.male);
+		kowshik.setDOB(25, 10, 1997);
+		kowshik.setMemebership(false, false);
+		//connectionMySQL newConnection = new connectionMySQL();
+		//newConnection.pushToDB(kowshik);
 		
 		
 	}

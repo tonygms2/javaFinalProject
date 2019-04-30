@@ -4,6 +4,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Currency;
 
+/**
+ * @author tonyg
+ * This class contains the common Attributes between the student and faculty class
+ *
+ */
 public abstract class CommonAttributes {
 	private LocalDate DOB;
 	protected boolean isIEEMember = false;
@@ -37,7 +42,7 @@ public abstract class CommonAttributes {
 	}
 	
 	public String showDOB() {
-		return DOB.format(DateTimeFormatter.ofPattern("d MMMM yyyy"));
+		return DOB.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 	}
 
 	gender ShowGender() {
