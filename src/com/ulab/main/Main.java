@@ -27,9 +27,9 @@ public class Main {
 		Student kowshik = new Student("Sheldon Cooper",1234567,"CSE",gender.male);
 		kowshik.setDOB(25, 10, 1997);
 		kowshik.setMemebership(false, false);
-		//connectionMySQL newConnection = new connectionMySQL();
-		//newConnection.pushToDB(kowshik);
-		
+		connectionMySQL newConnection = new connectionMySQL();
+		newConnection.pushToDB(kowshik);
+		newConnection.pushToDB(tony);
 		
 	}
 

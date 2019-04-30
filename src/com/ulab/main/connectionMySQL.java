@@ -68,6 +68,7 @@ public class connectionMySQL {
 				boolean gender = resultset.getBoolean("GENDER");
 				System.out.format("%s\n%s\n%s\n%s",id,Name,Dept,gender);
 			}
+			
 			statement.close();		
 		}catch (NullPointerException e) {
 			// TODO: handle exception
@@ -79,9 +80,17 @@ public class connectionMySQL {
 		}
 	}
 	
+	String getNameFromDB() throws SQLException{
+		return resultset.getString("NAME");
+	}
+	
+	String getIDFromDB() throws SQLException {
+		return resultset.getString("ID");
+	}
 	
 //	void getStatement() throws SQLException {
 //		
 //		
 //	}
 }
+
