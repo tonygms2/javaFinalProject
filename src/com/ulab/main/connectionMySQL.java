@@ -21,7 +21,7 @@ public class connectionMySQL {
 	private Integer ID;
 	private String gen,isCom,isIee;
 	
-	void pushToDB(Student stdnt) {
+	public void pushToDB(Student stdnt) {
 		try {
 			ID = stdnt.getStudentID();
 			//connection instance used to create a connection with mysql db
@@ -82,7 +82,7 @@ public class connectionMySQL {
 		}
 	}
 	
-	void dropInfo(Student stdnt) {
+	public void dropInfo(Student stdnt) {
 		try {
 			Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/finalproj", "root", "1234");
 			
@@ -98,13 +98,7 @@ public class connectionMySQL {
 			System.err.println(e.getMessage());
 		}
 	}
-	String getNameFromDB() throws SQLException{
-		return resultset.getString("NAME");
-	}
-	
-	String getIDFromDB() throws SQLException {
-		return resultset.getString("ID");
-	}
+
 	
 //	void getStatement() throws SQLException {
 //		

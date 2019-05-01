@@ -16,7 +16,8 @@ public class Main {
 		max.setDOB(9, 3, 1997);
 		max.setMemebership(true, true);
 		max.setStudentMoney(1400);
-		//max.showStudentInfo();
+		max.showStudentInfo();
+		System.out.println(max.getBalance());
 		
 		
 	}
