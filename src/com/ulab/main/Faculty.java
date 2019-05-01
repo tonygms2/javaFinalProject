@@ -8,7 +8,7 @@ public class Faculty extends CommonAttributes {
 	private String facultyName;
 	private String facultDepartment;
 	private int ID;
-	private double salary;
+	private double money;
 	
 	public Faculty(String facultyName,int ID,String facultyDepartment,Gender Gender) {
 		this.facultyName = facultyName;
@@ -16,11 +16,15 @@ public class Faculty extends CommonAttributes {
 		super.Gender = Gender;
 		this.ID = ID;
 	}
-	
 	public Faculty() {
 		
 	}
-	
+	public void setSalary(double money) {
+		this.money = money;
+	}
+	public double getSalary() {
+		return this.money;
+	}
 	void showFacultyInfo() {
 		//used to show faculty info
 		try {

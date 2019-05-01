@@ -1,21 +1,19 @@
 package com.ulab.main;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Currency;
-
 /**
  * @author tonyg
  * This class contains the common Attributes between the student and faculty class
  *
  */
 public abstract class CommonAttributes {
-	private LocalDate DOB;
+	private LocalDate DOB; //LocalDate is class from java.time library
 	protected boolean isIEEMember = false;
 	private boolean isComSocMember = false;
 	protected Gender Gender;
 	private int day,year,month;
-	
+
 	public void setMemebership(boolean isIEEMember, boolean isComSocMember) {
 		this.isIEEMember = isIEEMember;
 		this.isComSocMember = isComSocMember;
@@ -37,9 +35,9 @@ public abstract class CommonAttributes {
 		return this.Gender;
 	}
 	
-	public void setDOB(int day, int month, int year) {
+	public void setDOB(int day, int month, int year) { //setDOB method takes first argument as day, second argument month as integer and not String!!, and third argument as year
 		 DOB = LocalDate.of(year, month, day);
-	}
+	} 
 	
 	public String showDOB() {
 		return DOB.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
@@ -48,5 +46,4 @@ public abstract class CommonAttributes {
 	Gender ShowGender() {
 		return this.Gender;
 	}
-
 }

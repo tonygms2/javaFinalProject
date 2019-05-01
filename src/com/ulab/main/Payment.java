@@ -9,7 +9,6 @@ public class Payment {
 	private double currentStudentBalance;
 	private double currentFacultyBalance;
 	
-	
 	public void takeComSocMoney(Student stdnt) 		{
 		currentStudentBalance = stdnt.getBalance();
 			if(currentStudentBalance<100) {
@@ -38,14 +37,35 @@ public class Payment {
 		}
 		
 		}
-	public void giveEidBonus(Faculty fct) {
-//		 currentFacultyBalance = stdnt.getMoney();
-//
-//	      int bonus=(salary/100)*30;;
-//	   
-//	            stdnt.setMoney(salary+bonus);
-	}
-	
-	
-	
+		
+		public void giveEidBonus(Faculty fct) {
+			try {
+				if(fct.getSalary()>=50000) {
+					double bonus = (fct.getSalary()/100)*30;
+					double finalSalary = fct.getSalary() + bonus;
+					fct.setSalary(finalSalary);
+					System.out.println("Bonus with salary is "+finalSalary);
+					
+				}else if(fct.getSalary()>=100000) {
+					double bonus = (fct.getSalary()/100)*40;
+					double finalSalary = fct.getSalary() + bonus;
+					fct.setSalary(finalSalary);
+					System.out.println("Bonus with salary is "+finalSalary);
+				}else if(fct.getSalary()>=110000) {
+					double bonus = (fct.getSalary()/100)*50;
+					double finalSalary = fct.getSalary() + bonus;
+					fct.setSalary(finalSalary);
+					System.out.println("Bonus with salary is "+finalSalary);
+				}else {
+					double bonus = (fct.getSalary()/100)*10;
+					double finalSalary = fct.getSalary() + bonus;
+					fct.setSalary(finalSalary);
+					System.out.println("Bonus with salary is "+finalSalary);
+				}
+			} catch (Exception e) {
+				e.getMessage();
+				System.out.println("SET Faculty Salary FIRST!!!");
+			}
+		}
+
 }

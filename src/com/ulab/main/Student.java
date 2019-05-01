@@ -1,7 +1,5 @@
 package com.ulab.main;
 import java.lang.System;
-
-
 /**
  * @author tonyg
  *
@@ -34,11 +32,8 @@ public class Student extends CommonAttributes {
 	public int getStudentID() {
 		return this.ID;
 	}
-	
 	public Student() {
 	}
-	
-	
 	void showStudentInfo() {
 		try {
 			System.out.println("Student name is : "+studentName+" of ID: "+ID+" from "+studentDepartment+" department who is "+ super.ShowGender());
@@ -52,16 +47,11 @@ public class Student extends CommonAttributes {
 					System.out.println("Is a member of Computer Society");
 				}else{
 					System.out.println("Is not a member of Computer Society");
-				}
-				
-			
+				}		
 		} catch (NullPointerException e) {
 			// TODO: handle exception
 			System.out.println("**********Set the DOB first for Faculty*********");
 			System.out.println(e.toString());
 		}
 	}
-	
-	
-	
 }
