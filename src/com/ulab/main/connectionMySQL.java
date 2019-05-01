@@ -31,7 +31,7 @@ public class connectionMySQL {
 			//
 			String query = "SELECT * FROM jtable";
 			
-			if(stdnt.getGender()==gender.male) {
+			if(stdnt.getGender()==Gender.male) {
 				gen = "1";
 			}else {
 				gen = "0";
@@ -47,9 +47,6 @@ public class connectionMySQL {
 			}else {
 				isIee = "0";
 			}
-			
-			
-			
 			
 			String query2 = "INSERT INTO jtable " + "VALUES("+ID.toString()+",'"+stdnt.getStudentName()+"','"+stdnt.getStudentDept()+"','"+stdnt.showDOB()+"',"+gen+","+isCom+","+isIee+")";
 			
@@ -70,7 +67,12 @@ public class connectionMySQL {
 			}
 			
 			statement.close();		
-		}catch (NullPointerException e) {
+		}catch (SQLException e) {
+			// TODO: handle exception
+			System.out.println("********Set Gender First***********");
+			System.out.println(e.toString());
+		}	
+		catch (NullPointerException e) {
 			// TODO: handle exception
 			System.out.println("**********Set the DOB first*********");
 			System.out.println(e.toString());
@@ -80,6 +82,22 @@ public class connectionMySQL {
 		}
 	}
 	
+	void dropInfo(Student stdnt) {
+		try {
+			Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/finalproj", "root", "1234");
+			
+			String deleteQuerey = "DELETE FROM `jtable` WHERE `ID` = "+stdnt.getStudentID();
+			statement = connect.createStatement();
+			statement.executeUpdate(deleteQuerey);
+			System.out.println("Data Deleted from student table");
+			statement.close();
+		}catch(NullPointerException e) {
+			System.err.println(e.getMessage());
+		}
+		catch (SQLException e) {
+			System.err.println(e.getMessage());
+		}
+	}
 	String getNameFromDB() throws SQLException{
 		return resultset.getString("NAME");
 	}

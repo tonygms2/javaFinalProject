@@ -25,7 +25,7 @@ public class Student extends CommonAttributes {
 		this.money = money;
 	}
 	
-	public Student(String studentName,int ID,String StudentDepartment,gender Gender) {
+	public Student(String studentName,int ID,String StudentDepartment,Gender Gender) {
 		this.studentDepartment = StudentDepartment;
 		this.studentName = studentName;
 		super.Gender = Gender;

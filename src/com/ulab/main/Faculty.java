@@ -10,7 +10,7 @@ public class Faculty extends CommonAttributes {
 	private int ID;
 	private double salary;
 	
-	public Faculty(String facultyName,int ID,String facultyDepartment,gender Gender) {
+	public Faculty(String facultyName,int ID,String facultyDepartment,Gender Gender) {
 		this.facultyName = facultyName;
 		this.facultDepartment = facultyDepartment;
 		super.Gender = Gender;

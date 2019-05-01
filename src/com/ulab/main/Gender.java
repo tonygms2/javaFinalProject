@@ -1,6 +1,6 @@
 package com.ulab.main;
 
-public enum gender {
+public enum Gender {
 	male,
 	female,
 	others;

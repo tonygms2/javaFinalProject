@@ -5,15 +5,17 @@ package com.ulab.main;
  *
  */
 public class Payment {
-	double finalAmount;
-	double currentStudentBalance;
-	double currentFacultyBalance;
+	private double finalAmount;
+	private double currentStudentBalance;
+	private double currentFacultyBalance;
 	
 	
 	public void takeComSocMoney(Student stdnt) 		{
 		currentStudentBalance = stdnt.getBalance();
 			if(currentStudentBalance<100) {
-				System.out.println("Not Enough Money, Your Balance is : "+currentStudentBalance);
+				System.out.println("Not Enough Money for your ComSoc membership, Your Balance is : "+currentStudentBalance);
+			}else if(stdnt.getComSocInfo()!=true) {
+				System.out.println("Not a member of ComSoc, Can't Deduct the money");
 			}else{
 				currentStudentBalance = currentStudentBalance - 100;
 				stdnt.setStudentMoney(currentStudentBalance);
@@ -23,9 +25,13 @@ public class Payment {
 	
 	public void takeIeeMoney(Student stdnt) {
 		currentStudentBalance = stdnt.getBalance();
-		if(currentStudentBalance<2500) {
-			System.out.println("Not Enough Money, Your Balance is : "+currentStudentBalance);
-		}else{
+		if(stdnt.getIeeInfo()!=true) {
+			System.out.println("Not a member of IEEE, Can't Deduct the money");
+		}
+		else if(currentStudentBalance<2500) {
+			System.out.println("Not Enough Money for your IEEE membership, Your Balance is : "+currentStudentBalance);
+		}
+		else{
 			currentStudentBalance = currentStudentBalance - 2500;
 			stdnt.setStudentMoney(currentStudentBalance);
 			System.out.println(currentStudentBalance);

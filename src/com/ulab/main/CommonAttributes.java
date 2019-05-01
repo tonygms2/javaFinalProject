@@ -13,7 +13,7 @@ public abstract class CommonAttributes {
 	private LocalDate DOB;
 	protected boolean isIEEMember = false;
 	private boolean isComSocMember = false;
-	protected gender Gender;
+	protected Gender Gender;
 	private int day,year,month;
 	
 	public void setMemebership(boolean isIEEMember, boolean isComSocMember) {
@@ -29,11 +29,11 @@ public abstract class CommonAttributes {
 		return this.isComSocMember;
 	}
 	
-	public void setGender(gender Gender) {
+	public void setGender(Gender Gender) {
 		this.Gender = Gender;
 	}
 	
-	public gender getGender() {
+	public Gender getGender() {
 		return this.Gender;
 	}
 	
@@ -45,7 +45,7 @@ public abstract class CommonAttributes {
 		return DOB.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 	}
 
-	gender ShowGender() {
+	Gender ShowGender() {
 		return this.Gender;
 	}
 
